@@ -1,0 +1,34 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="close()">
+                <ion-icon name="arrow-back" mode="ios"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title *ngIf="profile.id==null"> Crear perfil </ion-title>
+        <ion-title *ngIf="profile.id!=null"> Actualizar perfil </ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="save()">
+                <ion-icon color="success" name="checkmark"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list lines="none" style="width: 100%;">
+        <ion-list-header>
+            <ion-label>Datos basicos</ion-label>
+        </ion-list-header>
+        <form [formGroup]="form">
+            <ion-item>
+                <ion-label position="floating">Nombre:</ion-label>
+                <ion-input formControlName="name"></ion-input>
+            </ion-item>
+        </form>
+    </ion-list>
+</ion-content>
+<ion-fab vertical="bottom" horizontal="end" *ngIf="profile.id!=null">
+    <ion-fab-button color="danger" (click)="delete(profile)">
+        <ion-icon name="trash"></ion-icon>
+    </ion-fab-button>
+</ion-fab>

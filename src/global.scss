@@ -1,11 +1,50 @@
 // http://ionicframework.com/docs/theming/
-@import '~@ionic/angular/css/core.css';
-@import '~@ionic/angular/css/normalize.css';
-@import '~@ionic/angular/css/structure.css';
-@import '~@ionic/angular/css/typography.css';
-@import '~@ionic/angular/css/display.css';
-@import '~@ionic/angular/css/padding.css';
-@import '~@ionic/angular/css/float-elements.css';
-@import '~@ionic/angular/css/text-alignment.css';
-@import '~@ionic/angular/css/text-transformation.css';
-@import '~@ionic/angular/css/flex-utils.css';
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+.action-sheet {
+  .danger {
+    .action-sheet-icon {
+      color: red;
+    }
+    color: red;
+  }
+  .primary {
+    .action-sheet-icon {
+      color: blue;
+    }
+    color: blue;
+  }
+  .success {
+    .action-sheet-icon {
+      color: green;
+    }
+    color: green;
+  }
+}
+
+.alert {
+  button.alert-button.dark {
+    color: black;
+  }
+  button.alert-button.danger {
+    color: red;
+  }
+}
+
+.slides {
+  min-height: 100%;
+}
+
+.swiper-pagination {
+  top: 0px;
+  height: 0px;
+}
